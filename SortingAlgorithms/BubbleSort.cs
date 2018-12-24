@@ -1,6 +1,8 @@
 using System;
 
-namespace sortingAlgorithmsCSharp
+//Space complexity is O(1)
+//Time completxity is O(n^2)
+namespace SortingAlgorithmsCSharp
 {
     public class BubbleSort
     {
