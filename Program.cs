@@ -12,7 +12,8 @@ namespace SortingAlgorithmsCSharp
             //BubbleSortTest();
             //SelectionSortTest();
             //InsertionSortTest();
-            MergeSortTest();
+            //MergeSortTest();
+            QuickSortTest();
         }
 
         public static void BubbleSortTest()
@@ -61,6 +62,20 @@ namespace SortingAlgorithmsCSharp
         {
             var inputArray = new int[] { 99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0 };
             MergeSort.Sort(ref inputArray);
+            
+            Debug.Assert(Enumerable.SequenceEqual(inputArray, _sortedArray));
+            
+            Console.WriteLine("Sorted array: ");
+            for (int i = 0; i < inputArray.Length; i++)
+            {
+                Console.Write(inputArray[i] + " ");
+            }
+        }
+
+        public static void QuickSortTest()
+        {
+            var inputArray = new int[] { 99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0 };
+            QuickSort.Sort(ref inputArray);
             
             Debug.Assert(Enumerable.SequenceEqual(inputArray, _sortedArray));
             
